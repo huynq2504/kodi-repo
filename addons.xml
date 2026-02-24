@@ -1,23 +1,45 @@
 <addons>
-	<addon id="plugin.video.xembongda"
-		   name="Xem Bóng Đá"
-		   version="1.0.0">
+  <addon id="repository.xembongda"
+         name="XemBongDa Repository"
+         version="1.0.0"
+         provider-name="YourName">
 
-		<requires>
-			<import addon="xbmc.python" version="3.0.0"/>
-			<import addon="script.module.requests"/>
-			<import addon="script.module.beautifulsoup4"/>
-		</requires>
+    <extension point="xbmc.addon.repository">
+      <info>https://huynq2504.github.io/kodi-repo/addons.xml</info>
+      <checksum>https://huynq2504.github.io/kodi-repo/addons.xml.md5</checksum>
+      <datadir>https://huynq2504.github.io/kodi-repo/</datadir>
+    </extension>
 
-		<extension point="xbmc.python.pluginsource"
-				   library="resources/lib/default.py">
-			<provides>video</provides>
-		</extension>
+    <extension point="xbmc.addon.metadata">
+      <summary>Repo</summary>
+      <description>Repository XemBongDa</description>
+      <platform>all</platform>
+    </extension>
+  </addon>
 
-		<extension point="xbmc.addon.metadata">
-			<summary>Watch videos from my website</summary>
-			<description>Custom video addon</description>
-			<platform>all</platform>
-		</extension>
-	</addon>
+
+  <addon id="plugin.video.xembongda"
+         name="Xem Bóng Đá"
+         version="1.0.0"
+         provider-name="YourName">
+
+    <requires>
+      <import addon="xbmc.python" version="3.0.0"/>
+      <import addon="script.module.requests"/>
+      <import addon="script.module.beautifulsoup4"/>
+    </requires>
+
+    <extension point="xbmc.python.pluginsource"
+               library="resources/lib/default.py">
+      <provides>video</provides>
+    </extension>
+
+    <extension point="xbmc.addon.metadata">
+      <summary>Watch videos</summary>
+      <description>Custom video addon</description>
+      <platform>all</platform>
+    </extension>
+
+  </addon>
+
 </addons>
