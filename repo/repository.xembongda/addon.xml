@@ -1,0 +1,37 @@
+<addon id="repository.xembongda"
+       name="XemBongDa Repository"
+       version="1.0.0"
+       provider-name="YourName">
+
+    <extension point="xbmc.addon.repository">
+        <info>https://huynq2504.github.io/kodi-repo/addons.xml</info>
+        <checksum>https://huynq2504.github.io/kodi-repo/addons.xml.md5</checksum>
+        <datadir>https://huynq2504.github.io/kodi-repo/</datadir>
+    </extension>
+
+    <extension point="xbmc.addon.metadata">
+        <summary>XemBongDa Repo</summary>
+        <description>Repository cho addon xem bóng đá</description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.xembongda" name="HuyNQ Repository" version="3.5" provider-name="HuyNQ">
+    <extension point="xbmc.addon.repository" name="HuyNQ Repository">
+        <dir>
+            <info compressed="false">https://huynq2504.github.io/kodi-repo/addons.xml</info>
+            <checksum>https://huynq2504.github.io/kodi-repo/addons.xml.md5</checksum>
+            <datadir zip="true">https://huynq2504.github.io/kodi-repo/zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>HuyNQ Repository</summary>
+        <description>A repository for alpha releases of jurialmunkey's skins.</description>
+        <disclaimer></disclaimer>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon>
