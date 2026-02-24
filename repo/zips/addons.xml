@@ -21,7 +21,7 @@
     <extension point="xbmc.addon.repository">
         <info compressed="false">https://raw.githubusercontent.com/huynq2504/kodi-repo/refs/heads/main/repo/repository.giaitri/addon.xml</info>
         <checksum>https://raw.githubusercontent.com/huynq2504/kodi-repo/refs/heads/main/repo/repository.giaitri/addons.xml.md5</checksum>
-        <datadir zip="true">hhttps://raw.githubusercontent.com/huynq2504/kodi-repo/refs/heads/main/repo/repository.giaitri/zips/</datadir>
+        <datadir zip="true">https://raw.githubusercontent.com/huynq2504/kodi-repo/refs/heads/main/repo/repository.giaitri/zips/</datadir>
     </extension>
 
     <extension point="xbmc.addon.metadata">
