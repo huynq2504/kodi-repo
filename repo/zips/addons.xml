@@ -25,8 +25,8 @@
     </extension>
 
     <extension point="xbmc.addon.metadata">
-        <summary>Giải trí Repo</summary>
-        <description>Repository cho Giải trí</description>
+        <summary>Giai Tri Repo</summary>
+        <description>Repository cho Giai Tri</description>
         <platform>all</platform>
     </extension>
 </addon></addons>
