@@ -16,7 +16,7 @@
         <description>Custom video addon</description>
         <platform>all</platform>
     </extension>
-</addon><addon id="repository.giaitri" name="Giai Tri Repository" version="1.0.0" provider-name="YourName">
+</addon><addon id="repository.giaitri" name="Giai Tri Repository" version="1.1.0" provider-name="YourName">
 
     <extension point="xbmc.addon.repository">
         <info compressed="false">https://raw.githubusercontent.com/huynq2504/kodi-repo/refs/heads/main/repo/repository.giaitri/addon.xml</info>
