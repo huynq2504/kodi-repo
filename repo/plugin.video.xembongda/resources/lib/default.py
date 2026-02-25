@@ -3,20 +3,14 @@ import xbmcplugin
 import xbmcgui
 import urllib.parse
 from sites import cakhiatv
-import autoupdate
-import time
 
 addon_handle = int(sys.argv[1])
 base_url = sys.argv[0]
 params = dict(urllib.parse.parse_qsl(sys.argv[2][1:]))
 
-now = int(time.time())
-last_check = int(addon.getSetting("last_update_check") or 0)
 
-# chỉ check nếu quá 1 ngày
-if now - last_check > 3600:
-    autoupdate.start()
-    addon.setSetting("last_update_check", str(now))
+if xbmc.Player().isPlaying():
+    xbmc.Player().stop()
 
 action = params.get("action")
 
