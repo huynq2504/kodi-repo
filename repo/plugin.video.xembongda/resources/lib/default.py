@@ -4,6 +4,7 @@ import xbmcgui
 import urllib.parse
 from sites import cakhiatv
 import autoupdate
+import time
 
 addon_handle = int(sys.argv[1])
 base_url = sys.argv[0]
