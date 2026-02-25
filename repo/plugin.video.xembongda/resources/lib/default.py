@@ -3,6 +3,7 @@ import xbmcplugin
 import xbmcgui
 import urllib.parse
 from sites import cakhiatv
+from sites import colatv
 
 addon_handle = int(sys.argv[1])
 base_url = sys.argv[0]
@@ -18,6 +19,8 @@ if action == "play":
     site = params.get("site")
     if site == "cakhiatv":
         cakhiatv.play_match(params.get("id"))
+    if site == "colatv":
+        colatv.play_match(params.get("id"))
 
 def build_url(query):
     return base_url + '?' + urllib.parse.urlencode(query)
@@ -29,7 +32,7 @@ def root_menu():
 
     websites = [
         {"name": "Cà khịa TV", "id": "cakhiatv"},
-        {"name": "Trang Phim", "id": "phim"},
+        {"name": "Cò lả TV", "id": "colatv"},
         {"name": "Trang TV", "id": "tv"},
     ]
 
@@ -53,16 +56,12 @@ def root_menu():
 def open_site(site_id):
 
     if site_id == "cakhiatv":
-        xbmcgui.Dialog().notification("Addon", "Đang mở Trang Bóng Đá")
-
         # TODO: gọi hàm parse web bongda
         cakhiatv.list_matches()
 
-    elif site_id == "phim":
-        xbmcgui.Dialog().notification("Addon", "Đang mở Trang Phim")
-
-        # TODO: gọi hàm parse web phim
-        list_videos_from_phim()
+    elif site_id == "colatv":
+        #xbmcgui.Dialog().notification("Addon", "Đang mở Trang Phim")
+        colatv.list_matches()
 
     elif site_id == "tv":
         xbmcgui.Dialog().notification("Addon", "Đang mở Trang TV")

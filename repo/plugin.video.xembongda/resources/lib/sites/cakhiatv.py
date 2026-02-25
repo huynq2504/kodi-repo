@@ -28,7 +28,7 @@ def today_timestamp():
 
 def format_time(timestamp):
     dt = datetime.fromtimestamp(timestamp)
-    return dt.strftime("%H:%M %d-%m-%Y")
+    return dt.strftime("%d-%m-%Y %H:%M")
 
 # =========================
 # Convert timestamp sang giờ VN
@@ -55,6 +55,7 @@ def get_html(url):
         return None
 
 def play_match(match_id):
+    xbmc.log(f"{BASE}/detail/{match_id}", xbmc.LOGINFO)
     detail_res = requests.get(f"{BASE}/detail/{match_id}")
     detail = detail_res.json()
 
@@ -84,33 +85,33 @@ def list_matches():
     matches = data.get("data", [])
 
     for match in matches:
-
-        title = match.get("title", "No title")
-        is_live = match.get("is_live", False)
-        match_time = match.get("match_time", 0)
+        data = {
+            "id": match.get("id", ""),
+            "match_id": match.get("match_id", ""),
+            "title": match.get("title", "No title"),
+            "match_time": match.get("match_time", 0),
+            "competition": match["competition"].get("name"),
+            "live": match.get("is_live", False),
+            "home_team": {
+                "name": match["home_info"].get("name"),
+                "logo": match["home_info"].get("logo")
+            },
+            "away_team": {
+                "name": match["away_info"].get("name"),
+                "logo": match["away_info"].get("logo")
+            }
+        }
 
         # Lấy logo
-        thumb = None
-        if "home_info" in match:
-            thumb = match["home_info"].get("logo")
-
-        # Lấy livestream id của BLV đầu tiên
-        stream_id = None
-        commentators = match.get("commentator_info", [])
-        if commentators:
-            stream_id = commentators[0].get("livestream_id")
-
-        if not stream_id:
-            continue
-
-       
+        thumb = data["home_team"]["logo"]
 
         # Tạo ListItem
-        title=f"{title} {format_time(match_time)}" 
+        title = f"{data['title']} [{format_time(data['match_time'])}]" 
+        if data['live']:
+            title=f"[COLOR red]● LIVE[/COLOR] " + title
+            
         li = xbmcgui.ListItem(label=title)
-        if is_live:
-            li.setLabel(f"[COLOR red]● LIVE[/COLOR] " + title)
-
+       
         li.setArt({
             "thumb": thumb,
             "icon": thumb,
@@ -118,15 +119,14 @@ def list_matches():
 
         li.setInfo("video", {
             "title": title,
-            "plot": f"Thời gian: {format_time(match_time)}"
+            "plot": f"{data['title']}\n{data['competition']}\nThời gian: {format_time(data['match_time'])}"
         })
         # Tạo URL gọi lại addon để play
-        match_id=match.get("id", 0)
 
         play_url = build_url({
             "action": "play",
             "site":"cakhiatv",
-            "id": match_id
+            "id": data["id"]
         })
 
 
