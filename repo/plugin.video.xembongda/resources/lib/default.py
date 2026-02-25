@@ -4,11 +4,8 @@ import xbmcgui
 import urllib.parse
 from sites import cakhiatv
 
-# Ép Kodi refresh repository
-xbmc.executebuiltin('UpdateAddonRepos')
-
-# Ép check update toàn bộ addon
-xbmc.executebuiltin('UpdateLocalAddons')
+import autoupdate
+autoupdate.start()
 
 addon_handle = int(sys.argv[1])
 base_url = sys.argv[0]
