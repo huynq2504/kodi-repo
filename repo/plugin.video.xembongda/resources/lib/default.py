@@ -5,7 +5,17 @@ import urllib.parse
 from sites import cakhiatv
 
 import autoupdate
-autoupdate.start()
+
+# Khởi tạo flag nếu chưa có
+if not hasattr(xbmc, "giaitri_update_checked"):
+    xbmc.giaitri_update_checked = False
+
+# Nếu đã check rồi thì thôi
+if xbmc.giaitri_update_checked:
+    pass
+else:
+    xbmc.giaitri_update_checked = True
+    autoupdate.start()
 
 addon_handle = int(sys.argv[1])
 base_url = sys.argv[0]

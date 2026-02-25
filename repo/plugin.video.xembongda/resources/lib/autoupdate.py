@@ -5,16 +5,10 @@ import threading
 import time
 
 ADDON_ID = xbmcaddon.Addon().getAddonInfo('id')
-if not hasattr(xbmc, "giaitri_update_checked"):
-    xbmc.giaitri_update_checked = False
+
 
 
 def run_update():
-    if xbmc.giaitri_update_checked:
-        return
-
-    xbmc.giaitri_update_checked = True
-
     try:
         xbmc.log(f"[{ADDON_ID}] Checking for updates...", xbmc.LOGINFO)
 
