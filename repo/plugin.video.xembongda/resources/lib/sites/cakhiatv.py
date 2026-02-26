@@ -6,6 +6,8 @@ import xbmc
 from datetime import datetime
 import urllib.parse
 import json
+import utils
+
 
 def build_url(query):
     return sys.argv[0] + '?' + urllib.parse.urlencode(query)
@@ -17,27 +19,6 @@ BASE = "https://api-ck.686868.me/api/livestream/client"
 ADDON_HANDLE = int(sys.argv[1])
 
 
-# =========================
-# Timestamp hôm nay (UTC)
-# =========================
-def today_timestamp():
-    from datetime import datetime, timezone
-    now = datetime.utcnow()
-    start = datetime(now.year, now.month, now.day, tzinfo=timezone.utc)
-    return int(start.timestamp())
-
-def format_time(timestamp):
-    dt = datetime.fromtimestamp(timestamp)
-    return dt.strftime("%d-%m-%Y %H:%M")
-
-# =========================
-# Convert timestamp sang giờ VN
-# =========================
-def timestamp_to_vn_time(timestamp):
-    return datetime.fromtimestamp(
-        timestamp,
-        timezone.utc
-    ).astimezone().strftime("%d/%m/%Y %H:%M:%S")
 
 
 # =========================
@@ -56,13 +37,62 @@ def get_html(url):
 
 def play_match(match_id):
     xbmc.log(f"{BASE}/detail/{match_id}", xbmc.LOGINFO)
-    detail_res = requests.get(f"{BASE}/detail/{match_id}")
-    detail = detail_res.json()
 
-    urls = json.loads(detail["data"]["stream_urls"])
-    xbmc.log(json.dumps(urls, indent=2), xbmc.LOGINFO)
-    # ưu tiên m3u8
-    stream = next((u for u in urls if ".m3u8" in u), urls[0])
+    detail_res = requests.get(f"{BASE}/detail/{match_id}")
+    detail = detail_res.json()["data"]
+
+    streams = []
+    labels = []
+
+    # ===== STREAM CHÍNH =====
+    main_name = detail["commentator_info"]["full_name"].strip()
+    main_urls = json.loads(detail["stream_urls"])
+
+    for url in main_urls:
+        streams.append(url)
+
+        if ".m3u8" in url:
+            labels.append(f"{main_name} (m3u8)")
+        elif ".flv" in url:
+            labels.append(f"{main_name} (flv)")
+        else:
+            labels.append(main_name)
+
+    # ===== STREAM DỰ PHÒNG =====
+    if "otherSimilarStreams" in detail:
+        for other in detail["otherSimilarStreams"]:
+
+            other_name = other["commentator_info"]["full_name"].strip()
+            other_urls = json.loads(other["stream_urls"])
+
+            for url in other_urls:
+                streams.append(url)
+
+                if ".m3u8" in url:
+                    labels.append(f"{other_name} (m3u8)")
+                elif ".flv" in url:
+                    labels.append(f"{other_name} (flv)")
+                else:
+                    labels.append(other_name)
+
+    if not streams:
+        xbmcgui.Dialog().notification(
+            "Thông báo",
+            "Không có link xem",
+            xbmcgui.NOTIFICATION_ERROR
+        )
+        return
+
+    # ===== POPUP CHỌN LINK =====
+    dialog = xbmcgui.Dialog()
+    index = dialog.select("Chọn người bình luận", labels)
+
+    if index == -1:
+        return
+
+    stream = streams[index]
+
+    xbmc.log(f"Play stream: {stream}", xbmc.LOGINFO)
 
     li = xbmcgui.ListItem(path=stream)
     li.setProperty("IsPlayable", "true")
@@ -72,9 +102,10 @@ def play_match(match_id):
 # =========================
 # Parse danh sách trận
 # =========================
-def list_matches():
-    url = BASE + "/all?date=" + str(today_timestamp()) + "&sport_type=0"
+def list_matches(live_only=False):
+    url = BASE + "/all?date=" + str(utils.today_timestamp()) + "&sport_type=0"
     xbmc.log(url, xbmc.LOGINFO)
+    items = []
     try:
         res = requests.get(url)
         data = res.json()
@@ -101,26 +132,8 @@ def list_matches():
                 "logo": match["away_info"].get("logo")
             }
         }
-
-        # Lấy logo
-        thumb = data["home_team"]["logo"]
-
-        # Tạo ListItem
-        title = f"{data['title']} [{format_time(data['match_time'])}]" 
-        if data['live']:
-            title=f"[COLOR red]● LIVE[/COLOR] " + title
-            
-        li = xbmcgui.ListItem(label=title)
-       
-        li.setArt({
-            "thumb": thumb,
-            "icon": thumb,
-        })
-
-        li.setInfo("video", {
-            "title": title,
-            "plot": f"{data['title']}\n{data['competition']}\nThời gian: {format_time(data['match_time'])}"
-        })
+        li=utils.GetListItemFromData(data)
+        
         # Tạo URL gọi lại addon để play
 
         play_url = build_url({
@@ -128,15 +141,16 @@ def list_matches():
             "site":"cakhiatv",
             "id": data["id"]
         })
-
-
-        li.setProperty("IsPlayable", "true")
-
-        xbmcplugin.addDirectoryItem(
-            handle=ADDON_HANDLE,
-            url=play_url,
-            listitem=li,
-            isFolder=False
-        )
-
-    xbmcplugin.endOfDirectory(ADDON_HANDLE)
+        if(data["live"]):
+            items.append((li, play_url))
+        if(not live_only):
+            xbmcplugin.addDirectoryItem(
+                handle=ADDON_HANDLE,
+                url=play_url,
+                listitem=li,
+                isFolder=False
+            )
+    if(not live_only):
+        xbmcplugin.endOfDirectory(ADDON_HANDLE)
+    else: 
+        return items
