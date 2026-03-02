@@ -9,27 +9,36 @@ import json
 import utils
 from sites import cakhiatv
 from sites import colatv
-from sites import quechoatv
+from sites import quechoatv, bunchatv
 
 ADDON_HANDLE = int(sys.argv[1])
 def list_matches():
     all_items = []
 
     # lấy từ cakhiatv
+    
+    try:
+        all_items.extend(quechoatv.list_matches(live_only=True))
+    except Exception as e:
+        xbmc.log(f"Lỗi live quechoatv", xbmc.LOGERROR)
+    try:
+        all_items.extend(quechoatv.list_matches(live_only=True, sport_slug="bong-chuyen"))
+    except Exception as e:
+        xbmc.log(f"Lỗi live quechoatv", xbmc.LOGERROR)
+    try:
+        all_items.extend(bunchatv.list_matches(live_only=True))
+    except Exception as e:
+        xbmc.log(f"Lỗi live bunchatv", xbmc.LOGERROR)
+    try:
+        all_items.extend(bunchatv.list_matches(live_only=True, sport_slug="truc-tiep-bong-chuyen"))
+    except Exception as e:
+        xbmc.log(f"Lỗi live bunchatv", xbmc.LOGERROR)
     try:
         all_items.extend(cakhiatv.list_matches(live_only=True))
     except Exception as e:
         xbmc.log(f"Lỗi live cakhiatv", xbmc.LOGERROR)
     try:
         all_items.extend(colatv.list_matches(live_only=True))
-    except Exception as e:
-        xbmc.log(f"Lỗi live colatv", xbmc.LOGERROR)
-    try:
-        all_items.extend(quechoatv.list_matches(live_only=True))
-    except Exception as e:
-        xbmc.log(f"Lỗi live colatv", xbmc.LOGERROR)
-    try:
-        all_items.extend(quechoatv.list_matches(live_only=True, sport_slug="bong-chuyen"))
     except Exception as e:
         xbmc.log(f"Lỗi live colatv", xbmc.LOGERROR)
 

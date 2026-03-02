@@ -94,22 +94,23 @@ def list_matches(live_only=False):
                 "title": match.get("title", match.get("homeTeamName", "") +' vs '+match.get("awayTeamName", "")),
                 "match_time": match.get("matchTime", 0),
                 "competition": match.get("competitionName", "No title"),
+                "logo_league": match.get("competitionLogo", ""),
                 "live": match.get("match_status") == "live",
                 "home_team": {
                     "name": match.get("homeTeamName", ""),
-                    "logo": match.get("homeTeamLogo", "")
+                    "logo": match["home_team"]["logo"]
                 },
                 "away_team": {
                     "name": match.get("awayTeamName", ""),
-                    "logo": match.get("awayTeamName", "")
+                    "logo": match["away_team"]["logo"]
                 },
                 "video_url":match.get("video_url", "")
             }
-
+            xbmc.log(match.get("match_status"), xbmc.LOGERROR)
             li=utils.GetListItemFromData(data)
 
             if(data["live"]):
-                items.append((li, play_url))
+                items.append((li, data["video_url"]))
             if(not live_only):
                 xbmcplugin.addDirectoryItem(
                     handle=ADDON_HANDLE,

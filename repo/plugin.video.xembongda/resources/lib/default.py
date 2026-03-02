@@ -5,7 +5,7 @@ import urllib.parse
 from sites import cakhiatv
 from sites import colatv
 from sites import livestv
-from sites import quechoatv
+from sites import quechoatv, bunchatv
 import xbmcaddon
 import os
 
@@ -29,6 +29,9 @@ if action == "play":
         colatv.play_match(params.get("id"))
     if site == "quechoatv":
         quechoatv.play_match(params.get("streams"))    
+    if site == "bunchatv":
+        bunchatv.play_match(params.get("match_url"))    
+    
 
 def build_url(query):
     return base_url + '?' + urllib.parse.urlencode(query)
@@ -42,6 +45,8 @@ def root_menu():
         {"name": "[COLOR yellow][B]Trực tiếp[/B][/COLOR]", "id": "livestv", "icon":os.path.join(addon_path,"resources","lib","sites","media","livestv.png")},
         {"name": "Quê Choa TV - [COLOR yellow]Bóng đá[/COLOR]", "id": "quechoatv", "icon":os.path.join(addon_path,"resources","lib","sites","media","quechoatv.png")}, 
         {"name": "Quê Choa TV - [COLOR yellow]Bóng chuyền[/COLOR]", "id": "quechoatv-bongchuyen", "icon":os.path.join(addon_path,"resources","lib","sites","media","quechoatv.png")}, 
+        {"name": "Bún Chả TV - [COLOR yellow]Bóng đá[/COLOR]", "id": "bunchatv", "icon":os.path.join(addon_path,"resources","lib","sites","media","colatv.png")}, 
+        {"name": "Bún Chả TV - [COLOR yellow]Bóng chuyền[/COLOR]", "id": "bunchatv-bongchuyen", "icon":os.path.join(addon_path,"resources","lib","sites","media","colatv.png")}, 
         {"name": "Cà khịa TV" , "id": "cakhiatv", "icon": os.path.join(addon_path,"resources","lib","sites","media","cakhiatv.png")},
         {"name": "Cò lả TV", "id": "colatv", "icon":os.path.join(addon_path,"resources","lib","sites","media","colatv.png")}, 
     ]
@@ -71,39 +76,20 @@ def root_menu():
 def open_site(site_id):
 
     if site_id == "cakhiatv":
-        # TODO: gọi hàm parse web bongda
         cakhiatv.list_matches()
-
     elif site_id == "colatv":
-        #xbmcgui.Dialog().notification("Addon", "Đang mở Trang Phim")
         colatv.list_matches()
-
     elif site_id == "livestv":
         livestv.list_matches()
-        
     elif site_id == "quechoatv":
         quechoatv.list_matches()
     elif site_id == "quechoatv-bongchuyen":
         quechoatv.list_matches(sport_slug="bong-chuyen")
+    elif site_id == "bunchatv":
+        bunchatv.list_matches()
+    elif site_id == "bunchatv-bongchuyen":
+        bunchatv.list_matches(sport_slug="truc-tiep-bong-chuyen")
 
-
-# =========================
-# Ví dụ function riêng từng web
-# =========================
-def list_videos_from_bongda():
-    li = xbmcgui.ListItem(label="Video mẫu Bóng Đá")
-    xbmcplugin.addDirectoryItem(addon_handle, "", li, False)
-    xbmcplugin.endOfDirectory(addon_handle)
-
-def list_videos_from_phim():
-    li = xbmcgui.ListItem(label="Video mẫu Phim")
-    xbmcplugin.addDirectoryItem(addon_handle, "", li, False)
-    xbmcplugin.endOfDirectory(addon_handle)
-
-def list_videos_from_tv():
-    li = xbmcgui.ListItem(label="Video mẫu TV")
-    xbmcplugin.addDirectoryItem(addon_handle, "", li, False)
-    xbmcplugin.endOfDirectory(addon_handle)
 
 
 # =========================

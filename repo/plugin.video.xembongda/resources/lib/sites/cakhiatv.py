@@ -121,15 +121,15 @@ def list_matches(live_only=False):
             "match_id": match.get("match_id", ""),
             "title": match.get("title", "No title"),
             "match_time": match.get("match_time", 0),
-            "competition": match["competition"].get("name"),
+            "competition": match.get("competition", {}).get("name", ""),
             "live": match.get("is_live", False),
             "home_team": {
-                "name": match["home_info"].get("name"),
-                "logo": match["home_info"].get("logo")
+                "name": match.get("home_info", {}).get("name", ""),
+                "logo": match.get("home_info", {}).get("logo", "")
             },
             "away_team": {
-                "name": match["away_info"].get("name"),
-                "logo": match["away_info"].get("logo")
+                "name": match.get("away_info", {}).get("name", ""),
+                "logo": match.get("away_info", {}).get("logo", "")
             }
         }
         li=utils.GetListItemFromData(data)
