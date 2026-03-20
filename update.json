@@ -6,20 +6,20 @@
 
   "sites": [
     {
-      "name": "QUEHCHOATV",
-      "shortURL": "https://bit.ly/quechoatv"
+      "name": "QUECHOATV",
+      "shortURL": "https://bit.ly/quechoatv",
       "baseUrl": "https://quechoatv.com",
       "apiUrl": ""
     },
     {
       "name": "BUNCHATV",
-      "shortURL": "https://bit.ly/bunchatv"
+      "shortURL": "https://bit.ly/bunchatv",
       "baseUrl": "",
       "apiUrl": ""
     },
     {
       "name": "SOCOLIVE",
-      "shortURL": "https://bit.ly/socolive"
+      "shortURL": "https://bit.ly/socolive",
       "baseUrl": "",
       "apiUrl": ""
     },
@@ -31,7 +31,7 @@
     },
     {
       "name": "CHUOICHIENTV",
-       "shortURL": "",
+      "shortURL": "",
       "baseUrl": "",
       "apiUrl": "https://api-v2.chuoichientv.com/v2/matches?page=1&limit=50&sport="
     }
