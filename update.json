@@ -2,5 +2,38 @@
   "versionCode": 3,
   "versionName": "1.0.1",
   "apkUrl": "https://huynq2504.github.io/kodi-repo/app-debug.apk",
-  "changelog": "Cập nhật giao diện và sửa lỗi"
+  "changelog": "Cập nhật giao diện và sửa lỗi",
+
+  "sites": [
+    {
+      "name": "QUEHCHOATV",
+      "shortURL": "https://bit.ly/quechoatv"
+      "baseUrl": "https://quechoatv.com",
+      "apiUrl": ""
+    },
+    {
+      "name": "BUNCHATV",
+      "shortURL": "https://bit.ly/bunchatv"
+      "baseUrl": "",
+      "apiUrl": ""
+    },
+    {
+      "name": "SOCOLIVE",
+      "shortURL": "https://bit.ly/socolive"
+      "baseUrl": "",
+      "apiUrl": ""
+    },
+    {
+      "name": "COLATV",
+      "shortURL": "",
+      "baseUrl": "",
+      "apiUrl": "https://api19.colatv88xd.cc/api"
+    },
+    {
+      "name": "CHUOICHIENTV",
+       "shortURL": "",
+      "baseUrl": "",
+      "apiUrl": "https://api-v2.chuoichientv.com/v2/matches?page=1&limit=50&sport="
+    }
+  ]
 }
