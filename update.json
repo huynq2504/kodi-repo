@@ -40,6 +40,12 @@
       "shortURL": "",
       "baseUrl": "",
       "apiUrl": "https://api-ck.686868.me/api/livestream/client"
+    },
+	{
+      "name": "HOADAOTV",
+      "shortURL": "",
+      "baseUrl": "https://hoadaotv.info",
+      "apiUrl": ""
     }
   ]
 }
