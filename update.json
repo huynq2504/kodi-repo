@@ -34,6 +34,12 @@
       "shortURL": "",
       "baseUrl": "",
       "apiUrl": "https://api-v2.chuoichientv.com/v2/matches?page=1&limit=50&sport="
+    },
+	{
+      "name": "CAKHIATV",
+      "shortURL": "",
+      "baseUrl": "",
+      "apiUrl": "https://api-ck.686868.me/api/livestream/client"
     }
   ]
 }
