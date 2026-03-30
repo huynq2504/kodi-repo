@@ -1,5 +1,5 @@
 {
-  "versionCode": 11,
+  "versionCode": 12,
   "versionName": "1.0.1",
   "apkUrl": "https://huynq2504.github.io/kodi-repo/app-debug.apk",
   "changelog": "Cập nhật giao diện và sửa lỗi",
@@ -52,6 +52,12 @@
       "shortURL": "",
       "baseUrl": "https://khandaia.cv",
       "apiUrl": "https://api-khandai.gvtv1.com/matches/graph"
+    },
+	{
+      "name": "HOIQUANTV",
+      "shortURL": "",
+      "baseUrl": "",
+      "apiUrl": "https://sv.hoiquantv.xyz/api/v1/external/fixtures/unfinished"
     }
   ]
 }
