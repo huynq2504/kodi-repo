@@ -8,7 +8,7 @@
     {
       "name": "QUECHOATV",
       "shortURL": "https://bit.ly/quechoatv",
-      "baseUrl": "https://quechoa9.live",
+      "baseUrl": "https://quechoa10.live",
       "apiUrl": ""
     },
     {
@@ -58,6 +58,12 @@
       "shortURL": "",
       "baseUrl": "",
       "apiUrl": "https://sv.hoiquantv.xyz/api/v1/external/fixtures/unfinished"
+    },
+	{
+      "name": "LUONGSONTV",
+      "shortURL": "",
+      "baseUrl": "",
+      "apiUrl": "https://api-ls.cdnokvip.com/api/match-schedule"
     }
   ]
 }
