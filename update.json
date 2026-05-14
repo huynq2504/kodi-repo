@@ -9,61 +9,78 @@
       "name": "QUECHOATV",
       "shortURL": "https://bit.ly/quechoatv",
       "baseUrl": "https://quechoa10.live",
-      "apiUrl": ""
+      "apiUrl": "",
+	  "orderID": 1
     },
     {
       "name": "BUNCHATV",
       "shortURL": "https://bit.ly/bunchatv",
       "baseUrl": "",
-      "apiUrl": ""
+      "apiUrl": "",
+	  "orderID": 2
     },
     {
       "name": "SOCOLIVE",
       "shortURL": "https://bit.ly/socolive",
       "baseUrl": "",
-      "apiUrl": ""
+      "apiUrl": "",
+	  "orderID": 3
     },
     {
       "name": "COLATV",
       "shortURL": "",
       "baseUrl": "",
-      "apiUrl": "https://api19.colatv88xd.cc/api"
+      "apiUrl": "https://api19.colatv88xd.cc/api",
+	  "orderID": 4
     },
     {
       "name": "CHUOICHIENTV",
       "shortURL": "",
       "baseUrl": "",
-      "apiUrl": "https://api-v2.chuoichientv.com/v2/matches?page=1&limit=50&sport="
+      "apiUrl": "https://api-v2.chuoichientv.com/v2/matches?page=1&limit=50&sport=",
+	  "orderID": 5
     },
 	{
       "name": "CAKHIATV",
       "shortURL": "",
       "baseUrl": "",
-      "apiUrl": "https://api-ck.xbill.live/api/livestream/client"
+      "apiUrl": "https://api-ck.cdnfaster-b.site/api/livestream/client",
+	  "orderID": 6
     },
 	{
       "name": "HOADAOTV",
       "shortURL": "",
       "baseUrl": "https://hoadaotv.me",
-      "apiUrl": ""
+      "apiUrl": "",
+	  "orderID": 7
     },
 	{
       "name": "KHANDAIA",
       "shortURL": "",
-      "baseUrl": "https://khandaia.cv",
-      "apiUrl": "https://api-khandai.gvtv1.com/matches/graph"
+      "baseUrl": "https://khandaia.ac",
+      "apiUrl": "https://api-khandai.gvtv1.com/matches/graph",
+	  "orderID": 8
     },
 	{
       "name": "HOIQUANTV",
       "shortURL": "",
       "baseUrl": "",
-      "apiUrl": "https://sv.hoiquantv.xyz/api/v1/external/fixtures/unfinished"
+      "apiUrl": "https://sv.hoiquantv.xyz/api/v1/external/fixtures/unfinished",
+	  "orderID": 9
     },
 	{
       "name": "LUONGSONTV",
       "shortURL": "",
       "baseUrl": "",
-      "apiUrl": "https://api-ls.cdnokvip.com/api/match-schedule"
+      "apiUrl": "https://api-ls.cdnokvip.com/api/match-schedule",
+	  "orderID": 10
+    },
+	{
+      "name": "GAVANGTV",
+      "shortURL": "",
+      "baseUrl": "https://xem1.gv08.live",
+      "apiUrl": "https://api-gavang.gvtv1.com",
+	  "orderID": 11
     }
   ]
 }
