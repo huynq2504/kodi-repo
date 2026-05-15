@@ -17,7 +17,7 @@
       "shortURL": "https://bit.ly/bunchatv",
       "baseUrl": "",
       "apiUrl": "",
-	  "orderID": 2
+	  "orderID": -1
     },
     {
       "name": "SOCOLIVE",
@@ -52,13 +52,13 @@
       "shortURL": "",
       "baseUrl": "https://hoadaotv.me",
       "apiUrl": "",
-	  "orderID": 7
+	  "orderID": -1
     },
 	{
       "name": "KHANDAIA",
       "shortURL": "",
       "baseUrl": "https://khandaia.ac",
-      "apiUrl": "https://api-khandai.gvtv1.com",
+      "apiUrl": "https://api-khandai.gvtv1.com/matches/graph",
 	  "orderID": 8
     },
 	{
@@ -81,6 +81,13 @@
       "baseUrl": "https://xem1.gv08.live",
       "apiUrl": "https://api-gavang.gvtv1.com",
 	  "orderID": 11
+    },
+	{
+      "name": "XOILACZ",
+      "shortURL": "",
+      "baseUrl": "https://xoilacz.vip",
+      "apiUrl": "",
+	  "orderID": 12
     }
   ]
 }
