@@ -58,7 +58,7 @@
       "name": "KHANDAIA",
       "shortURL": "",
       "baseUrl": "https://khandaia.ac",
-      "apiUrl": "https://api-khandai.gvtv1.com/matches/graph",
+      "apiUrl": "https://api-khandai.gvtv1.com",
 	  "orderID": 8
     },
 	{
