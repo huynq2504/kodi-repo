@@ -59,7 +59,7 @@
       "shortURL": "",
       "baseUrl": "https://khandaia3.me",
       "apiUrl": "https://api-khandai.gvtv1.com",
-	  "orderID": 8
+	  "orderID": -1
     },
 	{
       "name": "HOIQUANTV",
@@ -78,14 +78,14 @@
 	{
       "name": "GAVANGTV",
       "shortURL": "",
-      "baseUrl": "https://xem1.gv08.live",
+      "baseUrl": "https://xem2.gv08.live",
       "apiUrl": "https://api-gavang.gvtv1.com",
-	  "orderID": 11
+	  "orderID": -1
     },
 	{
       "name": "XOILACZ",
       "shortURL": "",
-      "baseUrl": "https://xoilacz.vip",
+      "baseUrl": "https://xoilacz.io",
       "apiUrl": "",
 	  "orderID": 12
     }
