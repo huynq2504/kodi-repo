@@ -57,9 +57,9 @@
 	{
       "name": "KHANDAIA",
       "shortURL": "",
-      "baseUrl": "https://khandaia3.me",
+      "baseUrl": "https://tructiep.khandaia.link",
       "apiUrl": "https://api-khandai.gvtv1.com",
-	  "orderID": -1
+	  "orderID": 5
     },
 	{
       "name": "HOIQUANTV",
