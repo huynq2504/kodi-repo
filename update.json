@@ -29,43 +29,43 @@
 	{
       "name": "LUONGSONTV",
       "shortURL": "",
-      "baseUrl": "",
+      "baseUrl": "https://ls44.site",
       "apiUrl": "https://api-ls.cdnokvip.com/api/match-schedule",
 	  "orderID": 4
-    },
-	{
-      "name": "COLATV",
-      "shortURL": "",
-      "baseUrl": "",
-      "apiUrl": "https://api19.colatv88xd.cc/api",
-	  "orderID": 5
-    },
-    {
-      "name": "SOCOLIVE",
-      "shortURL": "https://bit.ly/socolive",
-      "baseUrl": "",
-      "apiUrl": "",
-	  "orderID": 6
-    },
-    {
-      "name": "CHUOICHIENTV",
-      "shortURL": "",
-      "baseUrl": "",
-      "apiUrl": "https://api-v2.chuoichientv.com/v2/matches?page=1&limit=50&sport=",
-	  "orderID": 7
-    },
-	{
-      "name": "CAKHIATV",
-      "shortURL": "",
-      "baseUrl": "",
-      "apiUrl": "https://api.url-api-ck.com/api/livestream/client",
-	  "orderID": 8
     },
 	{
       "name": "KHANDAIA",
       "shortURL": "",
       "baseUrl": "https://tructiep.khandaia.link",
       "apiUrl": "https://sv.khandai-a.xyz/api/v1/external/fixtures/unfinished",
+	  "orderID": 5
+    },
+	{
+      "name": "COLATV",
+      "shortURL": "",
+      "baseUrl": "",
+      "apiUrl": "https://api19.colatv88xd.cc/api",
+	  "orderID": 6
+    },
+    {
+      "name": "SOCOLIVE",
+      "shortURL": "https://bit.ly/socolive",
+      "baseUrl": "",
+      "apiUrl": "",
+	  "orderID": 7
+    },
+    {
+      "name": "CHUOICHIENTV",
+      "shortURL": "",
+      "baseUrl": "",
+      "apiUrl": "https://api-v2.chuoichientv.com/v2/matches?page=1&limit=50&sport=",
+	  "orderID": 8
+    },
+	{
+      "name": "CAKHIATV",
+      "shortURL": "",
+      "baseUrl": "",
+      "apiUrl": "https://api.url-api-ck.com/api/livestream/client",
 	  "orderID": 9
     },
 	{
