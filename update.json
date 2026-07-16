@@ -8,7 +8,7 @@
 	{
       "name": "HOIQUANTV",
       "shortURL": "",
-      "baseUrl": "",
+      "baseUrl": "https://sv2.thiendinh6.live/",
       "apiUrl": "https://sv.hoiquantv.xyz/api/v1/external/fixtures/unfinished",
 	  "orderID": 2
     },
