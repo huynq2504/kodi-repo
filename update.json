@@ -5,13 +5,6 @@
   "changelog": "Cập nhật giao diện và sửa lỗi",
 
   "sites": [
-    {
-      "name": "QUECHOATV",
-      "shortURL": "https://bit.ly/quechoatv",
-      "baseUrl": "https://quechoa11.live",
-      "apiUrl": "",
-	  "orderID": 1
-    },
 	{
       "name": "HOIQUANTV",
       "shortURL": "",
@@ -89,5 +82,12 @@
       "apiUrl": "",
 	  "orderID": -1
     },
+	{
+      "name": "QUECHOATV",
+      "shortURL": "https://bit.ly/quechoatv",
+      "baseUrl": "https://quechoa11.live",
+      "apiUrl": "",
+	  "orderID": -1
+    }
   ]
 }
