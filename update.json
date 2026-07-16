@@ -1,5 +1,5 @@
 {
-  "versionCode": 15,
+  "versionCode": 16,
   "versionName": "1.0.1",
   "apkUrl": "https://huynq2504.github.io/kodi-repo/app-debug.apk",
   "changelog": "Cập nhật giao diện và sửa lỗi",
@@ -10,27 +10,34 @@
       "shortURL": "",
       "baseUrl": "https://sv2.thiendinh6.live/",
       "apiUrl": "https://sv.hoiquantv.xyz/api/v1/external/fixtures/unfinished",
-	  "orderID": 2
+	  "orderID": 1
     },
 	{
       "name": "XOILACZ",
       "shortURL": "",
       "baseUrl": "https://xoilacz.io",
       "apiUrl": "",
-	  "orderID": 3
+	  "orderID": 2
     },
 	{
       "name": "LUONGSONTV",
       "shortURL": "",
       "baseUrl": "https://ls44.site",
       "apiUrl": "https://api-ls.cdnokvip.com/api/match-schedule",
-	  "orderID": 4
+	  "orderID": 3
     },
 	{
       "name": "KHANDAIA",
       "shortURL": "",
       "baseUrl": "https://tructiep.khandaia.link",
       "apiUrl": "https://sv.khandai-a.xyz/api/v1/external/fixtures/unfinished",
+	  "orderID": 4
+    },
+	{
+      "name": "TIEULAMTV",
+      "shortURL": "",
+      "baseUrl": "https://sv2.tieulamwc.com",
+      "apiUrl": "https://api.tlap17062026.com",
 	  "orderID": 5
     },
 	{
