@@ -6,13 +6,6 @@
 
   "sites": [
 	{
-      "name": "HOIQUANTV",
-      "shortURL": "",
-      "baseUrl": "https://sv2.thiendinh6.live/",
-      "apiUrl": "https://sv.hoiquantv.xyz/api/v1/external/fixtures/unfinished",
-	  "orderID": 1
-    },
-	{
       "name": "XOILACZ",
       "shortURL": "",
       "baseUrl": "https://xoilacz.io",
@@ -25,13 +18,6 @@
       "baseUrl": "https://ls44.site",
       "apiUrl": "https://api-ls.cdnokvip.com/api/match-schedule",
 	  "orderID": 3
-    },
-	{
-      "name": "KHANDAIA",
-      "shortURL": "",
-      "baseUrl": "https://tructiep.khandaia.link",
-      "apiUrl": "https://sv.khandai-a.xyz/api/v1/external/fixtures/unfinished",
-	  "orderID": 4
     },
 	{
       "name": "TIEULAMTV",
@@ -95,6 +81,20 @@
       "baseUrl": "https://quechoa11.live",
       "apiUrl": "",
 	  "orderID": -1
+    },
+	{
+      "name": "HOIQUANTV",
+      "shortURL": "",
+      "baseUrl": "https://sv2.thiendinh6.live/",
+      "apiUrl": "https://sv.hoiquantv.xyz/api/v1/external/fixtures/unfinished",
+	  "orderID": -1
+    },
+	{
+      "name": "KHANDAIA",
+      "shortURL": "",
+      "baseUrl": "https://tructiep.khandaia.link",
+      "apiUrl": "https://sv.khandai-a.xyz/api/v1/external/fixtures/unfinished",
+	  "orderID": -4
     }
   ]
 }
