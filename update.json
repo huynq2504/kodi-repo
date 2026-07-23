@@ -55,6 +55,27 @@
 	  "orderID": 9
     },
 	{
+      "name": "GIOVANGTV",
+      "shortURL": "",
+      "baseUrl": "https://giovang.city",
+      "apiUrl": "https://live-api.keonhacaitp.one/storage/livestream",
+	  "orderID": 10
+    },
+	{
+      "name": "S8TV",
+      "shortURL": "",
+      "baseUrl": "https://ys8tv.com",
+      "apiUrl": "https://ys8tv.com/wp-json/s8-live/v1/fixtures",
+	  "orderID": 11
+    },
+	{
+      "name": "GAVANG33TV",
+      "shortURL": "",
+      "baseUrl": "https://gavang33.co",
+      "apiUrl": "https://gavangtv-api.gvaaa.cc/api/v1",
+	  "orderID": 11
+    },    
+	{
       "name": "HOADAOTV",
       "shortURL": "",
       "baseUrl": "https://hoadaotv.me",
