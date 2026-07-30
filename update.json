@@ -13,16 +13,9 @@
 	  "orderID": 2
     },
 	{
-      "name": "LUONGSONTV",
-      "shortURL": "",
-      "baseUrl": "https://ls44.site",
-      "apiUrl": "https://api-ls.cdnokvip.com/api/match-schedule",
-	  "orderID": 3
-    },
-	{
       "name": "TIEULAMTV",
       "shortURL": "",
-      "baseUrl": "https://sv2.tieulamwc.com",
+      "baseUrl": "https://tieulamtv.org",
       "apiUrl": "https://api.tlap17062026.com",
 	  "orderID": 5
     },
@@ -116,6 +109,13 @@
       "baseUrl": "https://tructiep.khandaia.link",
       "apiUrl": "https://sv.khandai-a.xyz/api/v1/external/fixtures/unfinished",
 	  "orderID": -5
+    },
+	{
+      "name": "LUONGSONTV",
+      "shortURL": "",
+      "baseUrl": "https://ls44.site",
+      "apiUrl": "https://api-ls.cdnokvip.com/api/match-schedule",
+	  "orderID": -3
     }
   ]
 }
