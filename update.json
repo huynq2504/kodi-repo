@@ -17,8 +17,22 @@
       "shortURL": "",
       "baseUrl": "https://tieulamtv.org",
       "apiUrl": "https://api.tlap17062026.com",
-	  "orderID": 5
+	  "orderID": 3
     },
+	{
+      "name": "S8TV",
+      "shortURL": "",
+      "baseUrl": "https://ys8tv.com",
+      "apiUrl": "https://ys8tv.com/wp-json/s8-live/v1/fixtures",
+	  "orderID": 4
+    },  
+	{
+      "name": "GIOVANGTV",
+      "shortURL": "",
+      "baseUrl": "https://giovang.city",
+      "apiUrl": "https://live-api.keonhacaitp.one/storage/livestream",
+	  "orderID": 5
+    },	  
 	{
       "name": "COLATV",
       "shortURL": "",
@@ -41,26 +55,19 @@
 	  "orderID": 8
     },
 	{
-      "name": "GIOVANGTV",
-      "shortURL": "",
-      "baseUrl": "https://giovang.city",
-      "apiUrl": "https://live-api.keonhacaitp.one/storage/livestream",
-	  "orderID": 10
-    },
-	{
-      "name": "S8TV",
-      "shortURL": "",
-      "baseUrl": "https://ys8tv.com",
-      "apiUrl": "https://ys8tv.com/wp-json/s8-live/v1/fixtures",
-	  "orderID": 11
-    },
-	{
       "name": "GAVANG33TV",
       "shortURL": "",
       "baseUrl": "https://gavang33.net",
       "apiUrl": "https://gavangtv-api.adviceme.io/api/v1",
-	  "orderID": 12
+	  "orderID": 9
     },    
+	{
+      "name": "PHAOHOATV",
+      "shortURL": "",
+      "baseUrl": "https://phaohoa1.live",
+      "apiUrl": "",
+	  "orderID": 10
+    },     
 	{
       "name": "HOADAOTV",
       "shortURL": "",
