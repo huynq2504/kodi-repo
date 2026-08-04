@@ -41,13 +41,6 @@
 	  "orderID": 8
     },
 	{
-      "name": "CAKHIATV",
-      "shortURL": "",
-      "baseUrl": "",
-      "apiUrl": "https://api.url-api-ck.com/api/livestream/client",
-	  "orderID": 9
-    },
-	{
       "name": "GIOVANGTV",
       "shortURL": "",
       "baseUrl": "https://giovang.city",
@@ -64,8 +57,8 @@
 	{
       "name": "GAVANG33TV",
       "shortURL": "",
-      "baseUrl": "https://gavang33.co",
-      "apiUrl": "https://gavangtv-api.gvaaa.cc/api/v1",
+      "baseUrl": "https://gavang33.net",
+      "apiUrl": "https://gavangtv-api.adviceme.io/api/v1",
 	  "orderID": 12
     },    
 	{
@@ -116,6 +109,13 @@
       "baseUrl": "https://ls44.site",
       "apiUrl": "https://api-ls.cdnokvip.com/api/match-schedule",
 	  "orderID": -3
+    },
+	{
+      "name": "CAKHIATV",
+      "shortURL": "",
+      "baseUrl": "",
+      "apiUrl": "https://api.url-api-ck.com/api/livestream/client",
+	  "orderID": -9
     }
   ]
 }
