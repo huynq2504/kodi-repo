@@ -6,6 +6,13 @@
 
   "sites": [
 	{
+      "name": "XOILAC365",
+      "shortURL": "",
+      "baseUrl": "https://xoilacxxb.tv",
+      "apiUrl": "",
+	  "orderID": 1
+    },
+	{
       "name": "XOILACZ",
       "shortURL": "",
       "baseUrl": "https://xoilaczznnz.tv",
