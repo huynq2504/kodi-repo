@@ -3,133 +3,149 @@
   "versionName": "1.0.1",
   "apkUrl": "https://huynq2504.github.io/kodi-repo/app-debug.apk",
   "changelog": "Cập nhật giao diện và sửa lỗi",
-
   "sites": [
-	{
+    {
+      "name": "BANGXEPHANG",
+      "shortURL": "",
+      "baseUrl": "",
+      "apiUrl": "",
+      "orderID": 10,
+      "leagues": [
+        {
+          "name": "Ngoại hạng Anh",
+          "url": "https://www.24h.com.vn/bong-da/bang-xep-hang-bong-da-anh-c48a466585.html"
+        },
+        {
+          "name": "La Liga",
+          "url": "https://www.24h.com.vn/bong-da/bang-xep-hang-bong-da-tay-ban-nha-c48a468129.html"
+        }
+      ]
+    },
+    {
       "name": "XOILAC365",
       "shortURL": "",
       "baseUrl": "https://xoilacxxb.tv",
       "apiUrl": "",
-	  "orderID": 1
+      "orderID": 1
     },
-	{
+    {
       "name": "XOILACZ",
       "shortURL": "",
       "baseUrl": "https://xoilaczbe.tv",
       "apiUrl": "",
-	  "orderID": 2
+      "orderID": 2
     },
-	{
+    {
       "name": "TIEULAMTV",
       "shortURL": "",
       "baseUrl": "https://tieulamtv.org",
       "apiUrl": "https://api.tlap17062026.com",
-	  "orderID": -3
+      "orderID": -3
     },
-	{
+    {
       "name": "S8TV",
       "shortURL": "",
       "baseUrl": "https://2ms8tv.top",
       "apiUrl": "https://2ms8tv.top/wp-json/s8-live/v1/fixtures",
-	  "orderID": 4
-    },  
-	{
+      "orderID": 4
+    },
+    {
       "name": "GIOVANGTV",
       "shortURL": "",
       "baseUrl": "https://giovang.asia",
       "apiUrl": "https://live-api.keonhacaitp.one/storage/livestream",
-	  "orderID": 5
-    },	  
-	{
+      "orderID": 5
+    },
+    {
       "name": "COLATV",
       "shortURL": "",
       "baseUrl": "",
       "apiUrl": "https://api19.colatv88xd.cc/api",
-	  "orderID": 6
+      "orderID": 6
     },
     {
       "name": "SOCOLIVE",
       "shortURL": "https://bit.ly/socolive",
       "baseUrl": "",
       "apiUrl": "",
-	  "orderID": 7
+      "orderID": 7
     },
     {
       "name": "CHUOICHIENTV",
       "shortURL": "",
       "baseUrl": "",
       "apiUrl": "https://api-v2.chuoichientv.com/v2/matches?page=1&limit=50&sport=",
-	  "orderID": 8
+      "orderID": 8
     },
-	{
+    {
       "name": "GAVANG33TV",
       "shortURL": "",
       "baseUrl": "https://gavang33.net",
       "apiUrl": "https://gavangtv-api.adviceme.io/api/v1",
-	  "orderID": 9
-    },    
-	{
+      "orderID": 9
+    },
+    {
       "name": "PHAOHOATV",
       "shortURL": "",
       "baseUrl": "https://phaohoa1.live",
       "apiUrl": "",
-	  "orderID": -10
-    },     
-	{
+      "orderID": -10
+    },
+    {
       "name": "HOADAOTV",
       "shortURL": "",
       "baseUrl": "https://hoadaotv.me",
       "apiUrl": "",
-	  "orderID": -1
+      "orderID": -1
     },
-	{
+    {
       "name": "GAVANGTV",
       "shortURL": "",
       "baseUrl": "https://xem2.gv08.live",
       "apiUrl": "https://api-gavang.gvtv1.com",
-	  "orderID": -1
+      "orderID": -1
     },
-	{
+    {
       "name": "BUNCHATV",
       "shortURL": "https://bit.ly/bunchatv",
       "baseUrl": "",
       "apiUrl": "",
-	  "orderID": -1
+      "orderID": -1
     },
-	{
+    {
       "name": "QUECHOATV",
       "shortURL": "https://bit.ly/quechoatv",
       "baseUrl": "https://quechoa11.live",
       "apiUrl": "",
-	  "orderID": -1
+      "orderID": -1
     },
-	{
+    {
       "name": "HOIQUANTV",
       "shortURL": "",
       "baseUrl": "https://sv2.thiendinh6.live/",
       "apiUrl": "https://sv.hoiquantv.xyz/api/v1/external/fixtures/unfinished",
-	  "orderID": -1
+      "orderID": -1
     },
-	{
+    {
       "name": "KHANDAIA",
       "shortURL": "",
       "baseUrl": "https://tructiep.khandaia.link",
       "apiUrl": "https://sv.khandai-a.xyz/api/v1/external/fixtures/unfinished",
-	  "orderID": -5
+      "orderID": -5
     },
-	{
+    {
       "name": "LUONGSONTV",
       "shortURL": "",
       "baseUrl": "https://ls44.site",
       "apiUrl": "https://api-ls.cdnokvip.com/api/match-schedule",
-	  "orderID": -3
+      "orderID": -3
     },
-	{
+    {
       "name": "CAKHIATV",
       "shortURL": "",
       "baseUrl": "",
       "apiUrl": "https://api.url-api-ck.com/api/livestream/client",
-	  "orderID": -9
+      "orderID": -9
     }
   ]
 }
