@@ -102,6 +102,13 @@
       "orderID": 9
     },
     {
+      "name": "GAVANG24H",
+      "shortURL": "",
+      "baseUrl": "https://bit.ly/gavang24h",
+      "apiUrl": "",
+      "orderID": 10
+    },
+    {
       "name": "PHAOHOATV",
       "shortURL": "",
       "baseUrl": "https://phaohoa1.live",
