@@ -114,7 +114,14 @@
       "baseUrl": "https://khoga.live",
       "apiUrl": "",
       "orderID": 10
-    },    
+    },
+    {
+      "name": "NEMBIENTV",
+      "shortURL": "",
+      "baseUrl": "https://nembientv.com",
+      "apiUrl": "",
+      "orderID": 10
+    }, 
     {
       "name": "PHAOHOATV",
       "shortURL": "",
