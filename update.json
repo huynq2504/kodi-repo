@@ -109,6 +109,13 @@
       "orderID": 10
     },
     {
+      "name": "BIAOMTV",
+      "shortURL": "",
+      "baseUrl": "https://biaomtv.us",
+      "apiUrl": "",
+      "orderID": 10
+    },
+    {
       "name": "PHAOHOATV",
       "shortURL": "",
       "baseUrl": "https://phaohoa1.live",
