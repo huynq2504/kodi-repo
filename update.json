@@ -116,6 +116,13 @@
       "orderID": 10
     },
     {
+      "name": "KHOGATV",
+      "shortURL": "",
+      "baseUrl": "https://khoga.live",
+      "apiUrl": "",
+      "orderID": 10
+    },    
+    {
       "name": "PHAOHOATV",
       "shortURL": "",
       "baseUrl": "https://phaohoa1.live",
